@@ -14,6 +14,7 @@
 #import "PreferencesController.h"
 #import "HighlightedTextView.h"
 #import "WelcomeController.h"
+#import "TableRowAndColumn.h"
 
 extern NSString* const FOLLOW_REDIRECTS;
 extern NSString* const RESPONSE_TIMEOUT;
@@ -47,6 +48,7 @@ extern NSString* const RESPONSE_TIMEOUT;
     
 	NSTextField *username;
 	NSTextField *password;
+    BOOL preemptiveBasicAuth;
 	
 	NSMutableData *receivedData;
 	NSString *contentType;
@@ -123,6 +125,7 @@ extern NSString* const RESPONSE_TIMEOUT;
 @property (assign) IBOutlet TabbingTableView *paramsTableView;
 @property (assign) IBOutlet NSTextField *username;
 @property (assign) IBOutlet NSTextField *password;
+@property (assign) BOOL preemptiveBasicAuth;
 @property (assign) IBOutlet NSOutlineView *savedOutlineView;
 @property (assign) IBOutlet NSPanel *saveRequestSheet;
 @property (assign) IBOutlet NSTextField *saveRequestTextField;
@@ -198,6 +201,8 @@ extern NSString* const RESPONSE_TIMEOUT;
 - (IBAction) viewResponseInDefaultApplication:(id)sender;
 - (IBAction) updateResponseSyntaxHighlight:(id)sender;
 - (void) showWelcome;
+- (void) doneEditingHeaderRow:(TableRowAndColumn *)tableRowAndColumn;
+- (void) doneEditingParamsRow:(TableRowAndColumn *)tableRowAndColumn;
 
 - (void)setRawRequestInput:(BOOL)value;
 
