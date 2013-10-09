@@ -595,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -611,6 +612,7 @@
 				HEADER_SEARCH_PATHS = core;
 				INFOPLIST_FILE = "CocoaRestClient-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = CocoaRestClient;
 				SDKROOT = macosx;
 			};
@@ -620,6 +622,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -634,6 +637,7 @@
 				HEADER_SEARCH_PATHS = core;
 				INFOPLIST_FILE = "CocoaRestClient-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = CocoaRestClient;
 				SDKROOT = macosx;
 			};
